@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= titulo %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+            <h1>📰 TechNews</h1>
+        </div>
+        <nav class="menu">
+            <a href="/" class="<%= pagina === 'home' ? 'ativo' : '' %>">Início</a>
+            <a href="/noticias" class="<%= pagina === 'noticias' ? 'ativo' : '' %>">Notícias</a>
+            <a href="/contato" class="<%= pagina === 'contato' ? 'ativo' : '' %>">Contato</a>
+        </nav>
+    </header>
+    <main class="conteudo-principal">
+
