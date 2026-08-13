@@ -1,0 +1,31 @@
+<%- include('partials/header') %>
+
+<section class="pagina-noticias">
+    <h2>📰 Últimas Notícias</h2>
+    
+    <% if (noticias.length === 0) { %>
+        <!-- Se não houver notícias no banco -->
+        <div class="sem-noticias">
+            <p>Nenhuma notícia cadastrada ainda. 📭</p>
+        </div>
+    <% } else { %>
+        <!-- Se houver notícias, mostra uma por uma -->
+        <div class="grid-noticias">
+            <% noticias.forEach(function(noticia) { %>
+                <article class="card-noticia">
+                    <img src="<%= noticia.imagem %>" alt="<%= noticia.titulo %>">
+                    <div class="info-noticia">
+                        <span class="categoria"><%= noticia.categoria %></span>
+                        <h3><%= noticia.titulo %></h3>
+                        <p><%= noticia.conteudo %></p>
+                        <small>
+                            Publicado em: <%= new Date(noticia.data_publicacao).toLocaleDateString('pt-BR') %>
+                        </small>
+                    </div>
+                </article>
+            <% }); %>
+        </div>
+    <% } %>
+</section>
+
+<%- include('partials/footer') %>

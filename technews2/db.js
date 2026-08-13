@@ -21,7 +21,7 @@ connection.connect((erro) => {
         console.error('Erro ao conectar no MySQL:', erro.message);
         return;
     }
-    console.log('✅ Conectado ao MySQL com sucesso!');
+    console.log('Conectado ao MySQL com sucesso!');
 });
 
 // Exportar para usar em outros arquivos

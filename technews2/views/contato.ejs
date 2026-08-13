@@ -1,0 +1,36 @@
+<%- include('partials/header') %>
+
+<section class="pagina-contato">
+    <h2>📬 Fale Conosco</h2>
+    <p>Tem uma sugestão de notícia? Entre em contato!</p>
+    
+    <form class="formulario-contato" action="#" method="POST">
+        <div class="campo">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+        </div>
+        
+        <div class="campo">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+        </div>
+        
+        <div class="campo">
+            <label for="assunto">Assunto:</label>
+            <select id="assunto" name="assunto">
+                <option value="sugestao">Sugestão de Notícia</option>
+                <option value="duvida">Dúvida</option>
+                <option value="outro">Outro</option>
+            </select>
+        </div>
+        
+        <div class="campo">
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+        </div>
+        
+        <button type="submit" class="botao-enviar">Enviar Mensagem</button>
+    </form>
+</section>
+
+<%- include('partials/footer') %>
